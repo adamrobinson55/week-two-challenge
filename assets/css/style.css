@@ -1,0 +1,180 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+}
+
+
+:root {
+    --textlight: white;
+    --textdark: black;
+    --lightwarm: yellow;
+    --darkwarm: orange;
+    --lightcool: lightblue;
+    --darkcool: darkblue;
+}
+
+h1 {
+    display:flex;
+    font-size: 200%;
+    padding: 0% 0% 3% 0%;
+    max-width: 250px;
+}
+
+h2 {
+    display: flex;
+    font-size: 150%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    background-color: var(--darkcool);
+    color: var(--textlight);
+    width: 100%;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    min-width: 350px;
+    text-decoration: underline;
+}
+
+header li:hover {
+    color: var(--lightwarm);
+    cursor:pointer;
+}
+
+header li:active {
+    color: var(--darkwarm);
+}
+
+.banner {
+    background-image: url(../images/Mountain-Banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    font-size: 30px;
+    color: var(--textdark);
+    margin-bottom: 5px;
+}
+
+#abme {
+    display: flex;
+    background-color: var(--darkwarm);
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 5px;
+    
+}
+
+main {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+aside {
+    width: 20%;
+    height: 75vh;
+    border-right: 5px solid;
+    border-right-color:var(--darkcool);
+    text-align: right;
+}
+
+aside p {
+    margin-right: 10px;
+    font-size: 300%;
+}
+
+#work {
+    /* display:flex;
+    flex-wrap: wrap; */
+    background-color: var(--lightcool);
+    width: 80%;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+#work ul {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width:100%;
+}
+
+#work ul li {
+    border: 5px solid;
+    width: 45%;
+    height: 120px;
+    margin: 10px
+}
+
+#work p {
+    background-color: var(--lightcool);
+    border-color: var(--darkcool);
+    padding: 4px;
+    border: 1px solid;
+}
+
+.horiseon {
+    border: 5px solid;
+    width: 100%;
+    height: auto;
+}
+
+.small-image {
+    object-fit:fill;
+    width:100%;
+    height:110px;
+    filter:blur(4px);
+}
+
+.lg-window {
+    text-align: center;
+}
+
+section div:hover,
+section img:hover {
+    border-color: var(--lightwarm);
+    cursor: pointer;
+    transition: .4s;
+    filter:blur(0px);
+}
+
+section li:active {
+    border-color: var(--darkwarm)
+}
+
+footer{
+    background-color: var(--darkwarm);
+    width: 100%;
+    height: 20vh;
+}
+
+@media screen and (max-width: 600px) {
+    aside {
+        display: none;
+    }
+    #work {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .small-image {
+        display:block;
+        filter: blur(0px)
+    }
+    #work ul li {
+        width:100%;
+    }
+}
